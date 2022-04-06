@@ -3,6 +3,7 @@
 * {
   border: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body,
 html {
@@ -160,6 +161,9 @@ button {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  // @media (min-width: 992px) {
+  //   max-width: 1440px;
+  // }
 }
 
 .flex {
@@ -173,3 +177,9 @@ button {
 .align-center {
   align-items: center;
 }
+
+#icon {
+  display: flex;
+  gap: 5px;
+}
+
