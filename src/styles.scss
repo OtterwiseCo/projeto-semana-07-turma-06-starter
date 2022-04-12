@@ -29,13 +29,14 @@ button {
   left: 0;
   right: 0;
 
-  &-links {
-    display: none;
-  }
+  //  &-links {
+  //    display: none;
+  // }
 
   @media (min-width: 992px) {
     &-links {
       display: flex;
+      
     }
   }
 
@@ -59,9 +60,10 @@ button {
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 600px) {
     .burguer-button {
       display: none;
+    
     }
   }
 }
@@ -172,6 +174,10 @@ button {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-end {
+  justify-content:flex-end
 }
 
 .align-center {
