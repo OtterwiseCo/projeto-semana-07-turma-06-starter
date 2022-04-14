@@ -29,14 +29,13 @@ button {
   left: 0;
   right: 0;
 
-  //  &-links {
-  //    display: none;
-  // }
+  &-links {
+    display: none;
+     }
 
   @media (min-width: 992px) {
     &-links {
       display: flex;
-      
     }
   }
 
@@ -60,13 +59,34 @@ button {
     }
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 992px) {
     .burguer-button {
       display: none;
-    
     }
   }
 }
+
+.active  {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  top: 58px;
+  left: 0px;
+  bottom: 0;
+  background-color: $backgroundColor;
+  z-index: 1000;  
+  padding-top: 28.5px;
+  padding-left: 16px;
+  gap: 40px;
+  height: calc(100vh - 58px);
+  overflow-y: hidden;
+  visibility: visible;
+
+}
+
+
+
 
 .footer {
   padding: 0px 16px;
@@ -176,10 +196,6 @@ button {
   justify-content: space-between;
 }
 
-.justify-end {
-  justify-content:flex-end
-}
-
 .align-center {
   align-items: center;
 }
@@ -187,5 +203,91 @@ button {
 #icon {
   display: flex;
   gap: 5px;
+}
+
+.area_burguer {
+    height: 100%;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @media (min-width: 992px) {
+          display: none;
+      }
+    
+   }
+  
+   #checkbox-menu{
+     position: absolute;
+     opacity: 0;
+     width: 60px;
+     height: 60px;
+     cursor: pointer;
+     padding-left: 16px;
+    //  background-color: aqua;
+    @media (min-width: 992px) {
+      display: none;
+  }
+ }
+  
+ #btn-mobile{
+   position: relative;
+   display: block;
+   justify-content: left;
+   height: 18px;
+   width: 24px;
+   padding-left: 16px;
+   margin-right: 30px;
+
+   @media (min-width: 992px) {
+    display: none;
+}
+   
+   
+ }
+ 
+ #btn-mobile span{
+   position: absolute;
+   display: block;
+   height: 2px;
+   width: 100%;
+   border-radius: 10px;
+   background: white ;
+   transition: 0.25s ease-in-out ;
+ 
+  }
+ 
+  .animation span:nth-child(1){
+     top:0;
+     height: 2px;
+ }
+ .animation span:nth-child(2){
+     top:8px;
+     height: 2px;
+  }
+  .animation span:nth-child(3){
+     top:16px;
+     width: 100%;
+     height: 2px;
+    
+  }
+ 
+  #checkbox-menu:checked + .animation span:nth-child(1){
+  transform: rotate(-45deg);
+  top:8;
+  }
+ 
+  #checkbox-menu:checked + .animation span:nth-child(2){
+     opacity: 0;
+     }
+ 
+  #checkbox-menu:checked + .animation  span:nth-child(3){
+        transform: rotate(45deg);
+        top:8;
+        }   
+
+.over-flow-hidden {
+  overflow: hidden;
 }
 

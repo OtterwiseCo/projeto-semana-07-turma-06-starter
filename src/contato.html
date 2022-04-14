@@ -11,6 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./contato.scss" />
+    <script type="module" src="./scripts/menu.js"></script>
+    <script type="module" src="./scripts/contato.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -18,6 +20,7 @@
       <header>
         <nav class="navbar">
           <div class="container flex align-center justify-between">
+            
             <svg
               width="83"
               height="17"
@@ -30,34 +33,26 @@
                 fill="white"
               />
             </svg>
-
+          
             <div class="navbar-links">
-              <a class="navbar-link" href="./index.html">Início</a>
-              <a class="navbar-link" href="./about.html">Sobre mim</a>
-              <a class="navbar-link" href="#footer">Contato</a>
+              <a class="navbar-link" href="index.html">Início</a>
+              <a class="navbar-link" href="about.html">Sobre mim</a>
+              <a class="navbar-link" href="contato.html">Contato</a>
             </div>
             
-            <button class="burguer-button">
-                <a href ="menu.html">
-               
-              <svg
-                width="18"
-                height="14"
-                viewBox="0 0 18 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 1H17M1 7H17M10 13H17"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </a>
-            </button>
-                     
+            
+            <button class="burguer-button" id="btn-mobile">
+              <div class="area_burguer">
+                <input type="checkbox" id="checkbox-menu"/>
+                <label for="checkbox-menu" class="animation">
+                  <span> </span> 
+                  <span> </span> 
+                  <span> </span> 
+                </label>
+                 </div>
+                </button> 
+            
+            
           </div>
         </nav>
         </header>
@@ -70,20 +65,16 @@
      </div>
      
      <form id="form" class="area">
-     <fieldset>
-     <label for="name"><p class="area-subtittle">Seu nome</p></label>
+     <label for="name" class="area-subtittle">Seu nome</label>
      <input type="text" name="name" placeholder="Seu nome" />
 
-     <label for="email"><p class="area-subtittle">Seu e-mail</p></label>
+     <label for="email" class="area-subtittle">Seu e-mail</label>
      <input type="email" name="email" placeholder="Seu email"  />
 
-     <label for="comment"><p class="area-subtittle">Mensagem</p></label>
+     <label for="comment" class="area-subtittle">Mensagem</label>
      <textarea for="comment" name="comment" id="comment" rows="4" cols="50" placeholder="Olá..."></textarea> 
-     <button type="submit" id="icon" class="button button__solid"> Enviar </button>
-     </fieldset>
-
-     
-     
+     <button type="submit" id="button_form" class="button button__solid"> Enviar </button>
+  
      </form>
 
        
@@ -142,7 +133,7 @@
           </footer>
           
     </main>
-    <script type="module" src="./scripts/contato.js"></script>
+        
     </body>
     </html>
     
