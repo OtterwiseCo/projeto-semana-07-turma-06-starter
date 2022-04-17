@@ -24,9 +24,9 @@ console.log(body)
 
 }
 
-window.onload= () => {  
-   
+
+  
     btnMobile.addEventListener('click', toggleMenu );
 
-}
+
 

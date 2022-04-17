@@ -83,7 +83,7 @@
 
        
     input {
-        position: static;
+        // position: static;
         border-radius: 8px;
         background-color: $colorRellenos;
         width: 100%;
@@ -95,9 +95,10 @@
         width: 280px; 
         color: #A0A0A1; 
         margin-top: 0px;
+        position: static;
         @media (min-width: 992px) {
             margin: auto;
-            position: static;
+            // position: static;
             width: 399px;
             color: #A0A0A1; 
             margin-top: 10px;
