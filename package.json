@@ -1,8 +1,9 @@
 {
   "name": "estudo-de-caso",
   "scripts": {
-    "start": "parcel ./src/*.html",
-    "build": "parcel build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -de dist",
+    "build": "parcel ./src/*.html"
   },
   "version": "1.0.0",
   "description": "",
